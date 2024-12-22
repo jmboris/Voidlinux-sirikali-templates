@@ -1,0 +1,31 @@
+# Template file for 'sirikali'
+pkgname=sirikali
+version=1.7.1
+revision=1
+
+hostmakedepends="binutils tar curl xbps xz"
+
+short_desc="A Qt/C++ GUI front end to cryfs,gocryptfs,securefs,ecryptfs and encfs"
+maintainer="JuanMa <numblinux@gmail.com>"
+license="GPL-3.0"
+homepage="https://mhogomchungu.github.io/sirikali/"
+changelog="https://github.com/mhogomchungu/sirikali/blob/master/changelog"
+distfiles="https://download.opensuse.org/repositories/home:/obs_mhogomchungu/Debian_11/amd64/sirikali_${version}-1_amd64.deb"
+checksum=d885e1882ff8666d31d08e5e0ab10bf966ce466ac4774251f693da8626e76dfb
+nostrip=yes
+
+
+do_extract() {
+    mkdir -p ${DESTDIR}
+    ar x ${XBPS_SRCDISTDIR}/${pkgname}-${version}/sirikali_${version}-1_amd64.deb
+}
+
+do_install() {
+    tar xf data.tar.xz -C ${DESTDIR}
+
+    # Install the icons
+    for size in 24 32 48 64 128 256; do
+        # Create the icon directories
+        mkdir -p ${DESTDIR}/usr/share/icons/hicolor/${size}x${size}/apps
+    done
+
