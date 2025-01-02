@@ -1,5 +1,6 @@
 # Voidlinux-sirikali-templates
 Templates for VoidLinux to install sirikali
+architectures X86_64 i686
 
 Latest version 1.8.0 ( see releases --> )
 
