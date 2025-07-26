@@ -7,9 +7,9 @@ Latest version 1.8.2 ( see releases --> )
 
 SiriKali is a Qt/C++ GUI application that manages ecryptfs, cryfs, encfs, gocryptfs, fscrypt and securefs based encrypted folders. SiriKali can also connect to ssh servers using sshf
 
+Binaries https://voidrepo.linuxnauta.com/
 
-
-Originnal project
+Developer
 https://mhogomchungu.github.io/sirikali/
 
 > [!IMPORTANT]
